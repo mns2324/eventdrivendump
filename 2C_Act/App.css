@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.856);
+  border: 3px solid rgb(0, 204, 255);
+  border-radius: 12px;
+  padding: 20px;
+  gap: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 20px;
+  border: 3px solid rgb(0, 204, 255);
+  border-radius: 8px;
+  background: #3a3232;
+}
+
+table {
+  border-spacing: 8px;
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 26px;
+  background: #1f1e1e;
+  border: 3px solid rgb(0, 204, 255);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  font-size: 16px;
+  background: #1f1e1e;
+  border: 3px solid rgb(0, 255, 98);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+td:active {
+  border: 3px solid rgb(255, 238, 0);
+}
+
+button:active {
+  border: 3px solid rgb(255, 238, 0);
+}
+
+.win {
+  border: 5px solid rgb(0, 255, 21);
+}
+
+.draw {
+  border: 5px solid rgb(92, 92, 92);
+}
