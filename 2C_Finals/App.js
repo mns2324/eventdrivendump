@@ -3,7 +3,13 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [board, setBoard] = useState(['Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected', 'Unselected']);
+  const [board, setBoard] = useState([
+    'Unselected', 'Unselected', 
+    'Unselected', 'Unselected', 
+    'Unselected', 'Unselected', 
+    'Unselected', 'Unselected', 
+    'Unselected', 'Unselected'
+  ]);
 
   function handleClick(pos) {
     let newBoard = board.slice();
@@ -62,6 +68,9 @@ function App() {
           </td>
         </tr>
       </table>
+      <br/>
+      {/* when clicked, alert will appear showing the products the user selected, then reset the selection */}
+      <button onClick={() => cartPopup()}>Submit</button>
     </div>
   );
 }
