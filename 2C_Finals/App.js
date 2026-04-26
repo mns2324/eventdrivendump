@@ -70,7 +70,12 @@ function App() {
   };
 
   const getTotal = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+      const item = cart[i];
+      total += item.price * item.quantity;
+    }
+    return total;
   };
 
   const handleSubmit = () => {
@@ -80,7 +85,10 @@ function App() {
     }
 
     const orderList = cart
-      .map((item) => `  ${item.name}: ${item.quantity}x = $${item.price}`)
+      .map(
+        (item) =>
+          `  ${item.name}: ${item.quantity}x = $${item.price * item.quantity}`
+      )
       .join('\n');
 
     console.log(orderList);
