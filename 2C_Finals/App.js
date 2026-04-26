@@ -84,6 +84,7 @@ function App() {
       return;
     }
 
+    // build the alert message, easier way of for loop + concatenate
     const orderList = cart
       .map(
         (item) =>
@@ -136,6 +137,7 @@ function App() {
             </thead>
 
             <tbody>
+              {/* works like a foreach loop, map each added item's data into a new table row*/}
               {cart.map((item) => (
                 <tr key={item.id}>
                   <td className="td">{item.name}</td>
