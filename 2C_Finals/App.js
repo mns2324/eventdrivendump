@@ -79,15 +79,18 @@ function App() {
       return;
     }
 
-    // create the order list, easier way of for loop + concatenation
     const orderList = cart
-      .map((item) => `${item.name}: ${item.quantity}x`)
+      .map((item) => `  ${item.name}: ${item.quantity}x = $${item.price}`)
       .join('\n');
 
+    console.log(orderList);
+
     alert(`
-      Order Submitted! \n 
-      ${orderList} \n
-      Total Price: $${getTotal()}
+  Order Submitted! 
+  ==============================
+  ${orderList}
+  ==============================
+  Total Price: $${getTotal()}
     `);
 
     // reset the cart
