@@ -65,6 +65,8 @@ function App() {
         )
       );
     } else {
+      // take all current items in the cart, copy into
+      // a new array and add the new item
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
